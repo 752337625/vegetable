@@ -9,7 +9,6 @@ export default defineUserConfig({
       // 索引全部内容
       indexContent: true,
       delay: 3000,
-      historyCount: 5,
       hotReload: true,
       // 为分类和标签添加索引
       customFields: [
@@ -150,9 +149,9 @@ export default defineUserConfig({
         presentation: true, //幻灯片
         sub: true, //上角标
         sup: true, //下角标
-        imageLazyload: true, // 启用图片懒加载
-        imageMark: true, // 启用图片标记
-        imageSize: true, // 启用图片大小
+        imgLazyload: true, // 启用图片懒加载
+        imgMark: true, // 启用图片标记
+        imgSize: true, // 启用图片大小
         container: true, // 自定义容器
         //imageTitle: true, // 启用图片标题
       },
@@ -184,9 +183,9 @@ export default defineUserConfig({
     navbarAutoHide: "always",
     hideSiteNameOnMobile: true,
     navbarLayout: {
-      left: ["Brand"],
+      start: ["Brand"],
       center: ["Links"],
-      right: ["Language", "Repo", "Outlook", "Search"],
+      end: ["Language", "Repo", "Outlook", "Search"],
     },
   }),
 });
