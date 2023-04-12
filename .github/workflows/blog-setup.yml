@@ -32,11 +32,6 @@ jobs:
           NODE_OPTIONS: --max_old_space_size=8192
           GH_TOKEN: ${{ secrets.BLOG_GH_TOKEN }}
 
-      - name: ls
-        run: |
-          cd dist
-          ls
-
       - name: Deploy
         uses: easingthemes/ssh-deploy@main
         env:
