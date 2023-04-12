@@ -27,8 +27,9 @@ jobs:
         run: pnpm i
 
       - name: build blog
-        run: |
-          pnpm run build
+        env:
+          NODE_OPTIONS: --max_old_space_size=8192
+        run: pnpm run build
         env:
           GH_TOKEN: ${{ secrets.BLOG_GH_TOKEN }}
 
