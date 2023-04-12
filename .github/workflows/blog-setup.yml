@@ -42,7 +42,7 @@ jobs:
         uses: easingthemes/ssh-deploy@main
         env:
           # 私钥
-          SSH_PRIVATE_KEY: ${{ secrets.BLOG_SSH_ACCESS_TOKEN }}
+          SSH_PRIVATE_KEY: ${{ secrets.BLOG_VEGETABLE_SSH_ACCESS_TOKEN }}
           # scp参数
           ARGS: '-avz --delete'
           # 源目录，编译后生成的文件目录
