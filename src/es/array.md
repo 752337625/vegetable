@@ -1,11 +1,12 @@
 ---
+article: false
 prev: ./symbol
 next: ./object1
 category:
   - ECMAScript
 tag:
   - ECMAScript
-article: false
+
 ---
 
 # Array
