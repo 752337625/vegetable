@@ -1,0 +1,8 @@
+{
+	// 扩展vscode插件推荐
+	"recommendations": [
+		"vue.volar",
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+	]
+}

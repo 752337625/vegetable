@@ -1,0 +1,55 @@
+name: blog-setup
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+jobs:
+  release:
+    name: build and ssh blog
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Use Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Setup Pnpm
+        run: npm i -g pnpm
+
+      - name: Install
+        run: pnpm i
+
+      - name: build blog
+        run: |
+          pnpm run build
+        env:
+          GH_TOKEN: ${{ secrets.BLOG_GH_TOKEN }}
+
+      - name: ls
+        run: |
+          cd dist
+          ls
+
+      - name: Deploy
+        uses: easingthemes/ssh-deploy@main
+        env:
+          # 私钥
+          SSH_PRIVATE_KEY: ${{ secrets.BLOG_SSH_ACCESS_TOKEN }}
+          # scp参数
+          ARGS: '-avz --delete'
+          # 源目录，编译后生成的文件目录
+          SOURCE: 'dist'
+          # 服务器ip：换成你的服务器IP
+          REMOTE_HOST: ${{ secrets.BLOG_SSH_HOST }}
+          # 用户
+          REMOTE_USER: ${{ secrets.BLOG_SSH_USERNAME }}
+          # 目标地址 你在服务器上部署代码的地方
+          TARGET: ${{ secrets.BLOG_SSH_TARGET }}
+          #EXCLUDE: '/src/, /node_modules/, package.json'

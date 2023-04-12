@@ -1,0 +1,31 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist_electron
+*.local
+
+# Editor directories and files
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+src/.vuepress/.temp/**
+src/.vuepress/.cache/**
+# 取消提交的配置文件
+dist-electron
+.eslintrc-auto-import.json
+typings/components.d.ts
+typings/auto-imports.d.ts
+release
+pnpm-lock.yaml
