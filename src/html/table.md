@@ -1,4 +1,5 @@
 ---
+article: false
 prev: ./img
 next: ./canvas
 category:

@@ -1,4 +1,5 @@
 ---
+article: false
 prev: ./set
 next: ./weakref
 category:

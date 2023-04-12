@@ -1,4 +1,5 @@
 ---
+article: false
 prev: ./operator
 next: ./intersectionObserver
 category:

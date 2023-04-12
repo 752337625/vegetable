@@ -1,4 +1,5 @@
 ---
+article: false
 prev: ./bigint
 next: ./symbol
 category:

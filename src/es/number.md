@@ -1,4 +1,5 @@
 ---
+article: false
 prev: ./general
 next: ./bigint
 category:

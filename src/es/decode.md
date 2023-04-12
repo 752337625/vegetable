@@ -1,4 +1,5 @@
 ---
+article: false
 prev: ./error
 next: ./general
 category:

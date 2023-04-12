@@ -1,4 +1,5 @@
 ---
+article: false
 prev: ./object1
 next: ./set
 category:

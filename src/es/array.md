@@ -5,6 +5,7 @@ category:
   - ECMAScript
 tag:
   - ECMAScript
+article: false
 ---
 
 # Array

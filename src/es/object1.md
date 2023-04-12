@@ -1,4 +1,5 @@
 ---
+article: false
 prev: ./array
 next: ./object2
 category:

@@ -1,4 +1,5 @@
 ---
+article: false
 prev: ./globalThis
 next: ./decode
 category:

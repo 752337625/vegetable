@@ -1,4 +1,5 @@
 ---
+article: false
 prev: ./map
 next: ./finalizationRegistry
 category:

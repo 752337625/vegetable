@@ -1,4 +1,5 @@
 ---
+article: false
 prev: ./decode
 next: ./number
 category:

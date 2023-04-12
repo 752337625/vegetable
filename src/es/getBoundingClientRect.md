@@ -1,4 +1,5 @@
 ---
+article: false
 prev: ./intersectionObserver
 next: ./mutationObserver
 category:

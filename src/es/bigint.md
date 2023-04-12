@@ -1,4 +1,5 @@
 ---
+article: false
 prev: ./number
 next: ./string
 category:

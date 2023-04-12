@@ -1,4 +1,5 @@
 ---
+article: false
 prev: ./introduction
 next: ./error
 category:

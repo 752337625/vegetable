@@ -1,4 +1,5 @@
 ---
+article: false
 prev: false
 next: ./globalThis
 category:

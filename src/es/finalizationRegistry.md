@@ -1,4 +1,5 @@
 ---
+article: false
 prev: ./weakref
 next: ./operator
 category:

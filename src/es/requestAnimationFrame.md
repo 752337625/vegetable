@@ -1,4 +1,5 @@
 ---
+article: false
 prev: ./mutationObserver
 next: false
 category:

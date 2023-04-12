@@ -1,4 +1,5 @@
 ---
+article: false
 prev: ./Object(大 O)
 next: ./map
 category:

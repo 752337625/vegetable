@@ -1,4 +1,5 @@
 ---
+article: false
 prev: ./string
 next: ./array
 category:
