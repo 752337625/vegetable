@@ -94,7 +94,7 @@ export default defineUserConfig({
       '<a href="http://beian.miit.gov.cn/" target="_blank">备案号: 京ICP备2022001662号</a> | <a href="/blog/site">关于网站</a>',
     blog: {
       articlePerPage: 20,
-      description: "他们说，生活总是比较容易",
+      description: "我们祖先没有榜样 可走了整整五千年，可我却要读书才知道",
       roundAvatar: true,
       // timeline: '懒了一天',
       // sidebarDisplay: 'always',
