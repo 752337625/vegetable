@@ -136,24 +136,26 @@ export default defineUserConfig({
         rss: true,
       },
       mdEnhance: {
-        tasklist: true, //任务列表
-        include: true, //导入文件
-        tabs: true, //选项卡启用
+        gfm: true, // 是否启用标准的 GitHub Favor Markdown 支持
+        tasklist: true, // 任务列表
+        include: true, // 导入文件
+        tabs: true, // 选项卡启用
         align: true,
         codetabs: true,
         demo: true,
-        flowchart: true,
-        footnote: true,
-        katex: true,
-        mermaid: true,
-        presentation: true, //幻灯片
-        sub: true, //上角标
-        sup: true, //下角标
+        echarts: true, // 是否启用 echarts 图表支持
+        flowchart: true, // 是否启用 flowchart 流程图支持
+        footnote: true, // 是否启用脚注格式支持。
+        katex: true, // 是否启用 katex 语法支持
+        mermaid: true, // 是否启用 mathjax 语法支持
+        presentation: true, // 幻灯片
+        sub: true, // 上角标
+        sup: true, // 下角标
+        figure: true, // 启用 figure
         imgLazyload: true, // 启用图片懒加载
         imgMark: true, // 启用图片标记
         imgSize: true, // 启用图片大小
         container: true, // 自定义容器
-        //imageTitle: true, // 启用图片标题
       },
       blog: {
         excerpt: true, //是否为每个页面生成摘录。
