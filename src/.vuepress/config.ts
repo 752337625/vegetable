@@ -136,26 +136,30 @@ export default defineUserConfig({
         rss: true,
       },
       mdEnhance: {
-        gfm: true, // 是否启用标准的 GitHub Favor Markdown 支持
-        tasklist: true, // 任务列表
-        include: true, // 导入文件
         tabs: true, // 选项卡启用
-        align: true,
-        codetabs: true,
-        demo: true,
+        codetabs: true, // 代码分组
+        chart: true,
         echarts: true, // 是否启用 echarts 图表支持
-        flowchart: true, // 是否启用 flowchart 流程图支持
-        footnote: true, // 是否启用脚注格式支持。
-        katex: true, // 是否启用 katex 语法支持
         mermaid: true, // 是否启用 mathjax 语法支持
-        presentation: true, // 幻灯片
+        katex: true, // 使用 KaTeX 启用 TeX 支持
+        mathjax: true, // 使用 mathjax 启用 TeX 支持
+        vuePlayground: true, // 启用 vue 交互演示
         sub: true, // 上角标
         sup: true, // 下角标
+        demo: true, // 代码演示
+        tasklist: true, // 任务列表
         figure: true, // 启用 figure
         imgLazyload: true, // 启用图片懒加载
         imgMark: true, // 启用图片标记
         imgSize: true, // 启用图片大小
+        include: true, // 导入文件
+        attrs: true, // 属性支持
+        presentation: true, // 幻灯片
+        flowchart: true, // 是否启用 flowchart 流程图支持
+        footnote: true, // 是否启用脚注格式支持。
+        align: true,
         container: true, // 自定义容器
+        gfm: true, // 是否启用标准的 GitHub Favor Markdown 支持
       },
       blog: {
         excerpt: true, //是否为每个页面生成摘录。
