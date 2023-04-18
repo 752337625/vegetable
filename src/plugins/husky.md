@@ -5,9 +5,9 @@ next: false
 category:
   - plugins
 tag:
-  - 插件
+  - husky
 ---
 
-# 利用 husky,cz-git,@commitlint/cli 规范 commit message
+<!-- # 利用 husky,cz-git,@commitlint/cli 规范 commit message -->
 
-https://zhuanlan.zhihu.com/p/542568185
+<!-- https://zhuanlan.zhihu.com/p/542568185 -->

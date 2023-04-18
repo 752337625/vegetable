@@ -5,7 +5,7 @@ next: false
 category:
   - plugins
 tag:
-  - 插件
+  - introjs
 ---
 
-# intro.js
+<!-- # intro.js -->

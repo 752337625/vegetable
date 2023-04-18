@@ -5,7 +5,7 @@ next: false
 category:
   - plugins
 tag:
-  - 插件
+  - npmrc
 ---
 
-# .npmrc 文件
+<!-- # .npmrc 文件 -->

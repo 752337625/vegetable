@@ -5,5 +5,5 @@ next: false
 category:
   - plugins
 tag:
-  - 插件
+  - cordova
 ---

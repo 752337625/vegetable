@@ -1,10 +1,10 @@
 ---
 prev: false
-next: false
+next: ./tweenLite
 category:
   - Plugins
 tag:
-  - Greensock
+  - GreenSock
 ---
 
 # V2-Greensock 如此简单
@@ -117,7 +117,7 @@ npm install gsap
 TweenMax 包括 TweenSite、TimelineLite、TimelineMax、CSSPlugin、RoundPropsPlugin、BezierPlugin、DirectionalRotationPlugin、AttrPlugin，以及除 CustomEase、CustomWiggle 和 CustomBounce 之外的 All Eases ）
 
 ```js:no-line-numbers
-import { TweenMax, TimelineLite, Power2, Elastic, CSSPlugin } from "gsap/TweenMax";
+// import { TweenMax, TimelineLite, Power2, Elastic, CSSPlugin } from "gsap/TweenMax";
 ```
 
 ## 特殊属性
@@ -133,7 +133,7 @@ import { TweenMax, TimelineLite, Power2, Elastic, CSSPlugin } from "gsap/TweenMa
   - **delay: Number：动画开始前的延迟量（秒）**
   - **ease: Ease (or Function or String)：你可以从各种 Easing 中进行选择，以控制动画过程中的变化率，给它一种特定的“感觉”。例如，Elastic.easeOut 或 Strong.easeInOut。为了获得最佳性能，使用 GreenSock 的其中一个简易程序（Linear、Power0、Power1、Power2、Power3、Power4、Quad、Cubic、Quart、Quint 和 Strong，每个程序都有.eseIn、.eseOut 和.eseInOut。当然你也可以使用它的扩展 Easing Elastic、Back、Bounce、SlowMo、SteppedEase、Rough、Circ、Expo 和 Sine）。通过名称（字符串）定义 Easing，如“Strong.eseOut”。当然开通会员开可以自定义,上官网[Easing](https://greensock.com/docs/v2/Easing)**
   - immediateRender: Boolean：通常，当您创建一个 tween 时，它会在下一帧（更新周期）开始渲染，除非您指定延迟。但是，如果希望在创建 tween 时强制其立即渲染，请将 immediateRender 设置为 true。（并非立即触发动画和等待触发条件动画而是针对浏览器帧动画）
-  - lazy: Boolean：官网最后一句话在大多数情况下，您不需要设置懒惰。
+  - lazy: Boolean：官网：在大多数情况下，您不需要设置懒惰。
   - onComplete: Function
   - onCompleteParams: Array
   - onCompleteScope: Object
@@ -154,9 +154,3 @@ import { TweenMax, TimelineLite, Power2, Elastic, CSSPlugin } from "gsap/TweenMa
   - yoyo: Boolea
   - repeatDelay: Number
   - smoothChildTiming: Boolean
-
-## TweenLite
-
-<ClientOnly>
-  <TweenLite></TweenLite>
-</ClientOnly>
