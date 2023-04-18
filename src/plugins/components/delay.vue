@@ -1,7 +1,7 @@
 <script setup>
 // import TweenLite from "gsap/TweenLite";
 import { ElButton } from "element-plus";
-import { TweenLite, Linear } from "gsap/TweenMax";
+import { TweenLite, Linear } from "gsap/umd/TweenMax";
 import { nextTick } from "vue";
 var tweenLite = null;
 nextTick(() => {
