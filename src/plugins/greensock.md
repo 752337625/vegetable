@@ -117,7 +117,7 @@ npm install gsap
 TweenMax 包括 TweenSite、TimelineLite、TimelineMax、CSSPlugin、RoundPropsPlugin、BezierPlugin、DirectionalRotationPlugin、AttrPlugin，以及除 CustomEase、CustomWiggle 和 CustomBounce 之外的 All Eases ）
 
 ```js:no-line-numbers
-// import { TweenMax, TimelineLite, Power2, Elastic, CSSPlugin } from "gsap/TweenMax";
+// import { TweenMax, TimelineLite, Power2, Elastic, CSSPlugin } from "gsap/umd/TweenMax";
 ```
 
 ## 特殊属性

@@ -36,7 +36,7 @@ tag:
 <script setup>
 // import TweenLite from "gsap/TweenLite";
 import { ElButton } from "element-plus";
-import { TweenLite, Linear } from "gsap/TweenMax";
+import { TweenLite, Linear } from "gsap/umd/TweenMax";
 import { nextTick, ref } from "vue";
 var tweenLite = null;
 nextTick(() => {
@@ -107,7 +107,7 @@ const reverse = () => {
 <script setup>
 // import TweenLite from "gsap/TweenLite";
 import { ElButton } from "element-plus";
-import { TweenLite, Back } from "gsap/TweenMax";
+import { TweenLite, Back } from "gsap/umd/TweenMax";
 import { nextTick } from "vue";
 var tweenLite = null;
 nextTick(() => {
@@ -177,7 +177,7 @@ const reverse = () => {
 <script setup>
 // import TweenLite from "gsap/TweenLite";
 import { ElButton } from "element-plus";
-import { TweenLite, Bounce, Circ } from "gsap/TweenMax";
+import { TweenLite, Bounce, Circ } from "gsap/umd/TweenMax";
 import { nextTick } from "vue";
 var tweenLite = null;
 nextTick(() => {
@@ -265,7 +265,7 @@ const reverse = () => {
 <script setup>
 // import TweenLite from "gsap/TweenLite";
 import { ElButton } from "element-plus";
-import { TweenLite, Power4 } from "gsap/TweenMax";
+import { TweenLite, Power4 } from "gsap/umd/TweenMax";
 import { nextTick } from "vue";
 var tweenLite = null;
 nextTick(() => {
@@ -343,7 +343,7 @@ const invalidate = () => {
 <script setup>
 // import TweenLite from "gsap/TweenLite";
 import { ElButton } from "element-plus";
-import { TweenLite, Linear } from "gsap/TweenMax";
+import { TweenLite, Linear } from "gsap/umd/TweenMax";
 import { nextTick } from "vue";
 var tweenLite = null;
 nextTick(() => {
@@ -417,7 +417,7 @@ const delay = (num = 5) => {
 <script setup>
 // import TweenLite from "gsap/TweenLite";
 import { ElButton } from "element-plus";
-import { TweenLite, Linear } from "gsap/TweenMax";
+import { TweenLite, Linear } from "gsap/umd/TweenMax";
 import { nextTick, ref } from "vue";
 var tweenLite = null;
 // let startTime = ref(0);
