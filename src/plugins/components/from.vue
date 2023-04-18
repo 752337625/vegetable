@@ -25,10 +25,12 @@ nextTick(() => {
 
 const restart = () => {
   // 参数意思：考虑delay属性
+  if (tweenLite.isActive()) return;
   tweenLite.restart(true, false);
 };
 const reverse = () => {
-  tweenLite.reverse(0);
+  if (tweenLite.isActive()) return;
+  tweenLite.reverse();
 };
 </script>
 

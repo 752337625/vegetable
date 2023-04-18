@@ -29,6 +29,7 @@
     "**/dist/**": true,
     "**/yarn.lock": true
   },
+  "volar.inlayHints.eventArgumentInInlineHandlers": false,
   //stylelint代码自动检查相关配置 全部取消
   // "css.validate": false, //取消css校验采用styleLine进行代码检测
   // "less.validate": false, //取消less校验采用styleLine进行代码检测

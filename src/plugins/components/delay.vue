@@ -1,19 +1,19 @@
 <script setup>
 // import TweenLite from "gsap/TweenLite";
 import { ElButton } from "element-plus";
-import { TweenLite, Power4 } from "gsap/TweenMax";
+import { TweenLite, Linear } from "gsap/TweenMax";
 import { nextTick } from "vue";
 var tweenLite = null;
 nextTick(() => {
-  let logo = document.getElementById("invalidate");
-  tweenLite = TweenLite.to(logo, 2, {
+  let logo = document.getElementById("delay");
+  tweenLite = TweenLite.to(logo, 10, {
     css: {
-      left: "+=100",
+      left: "610px",
       backgroundColor: "black",
       borderBottomColor: "#90e500",
     },
     delay: 0,
-    ease: Power4.easeInOut,
+    ease: Linear.easeIn,
   });
 });
 
@@ -26,38 +26,34 @@ const reverse = () => {
   if (tweenLite.isActive()) return;
   tweenLite.reverse();
 };
-const invalidate = () => {
+const delay = (num = 5) => {
   if (tweenLite.isActive()) return;
-  tweenLite.invalidate();
-  tweenLite.restart();
+  tweenLite.delay(num);
+  tweenLite.restart(true, false);
 };
 </script>
 
 <template>
-  <span class="title">不恢复到任何以前记录的开始值的情况下重新启动动画</span>
   <div id="demo">
-    <div id="invalidate">
-      <span>TweenLite.to</span>
+    <div id="delay">
+      <span>TweenLite.delay</span>
     </div>
     <div>
       <el-button type="primary" @click="restart">restart</el-button>
       <el-button type="primary" @click="reverse">reverse</el-button>
-      <el-button type="primary" @click="invalidate">invalidate</el-button>
+      <el-button type="primary" @click="delay(5)">delay(5)</el-button>
+      <el-button type="primary" @click="delay(0)">delay(0)</el-button>
     </div>
   </div>
 </template>
 <style lang="less" scoped>
-.title {
-  display: inline-block;
-  margin: 10px 0;
-}
 #demo {
   height: 150px;
   background-color: #333;
   padding: 8px;
   margin-bottom: 25px;
 }
-#invalidate {
+#delay {
   font-size: 18px;
   text-align: center;
   position: relative;
