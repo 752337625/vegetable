@@ -34,10 +34,10 @@ tag:
 
 ```vue:no-line-numbers
 <script setup>
-// import TweenLite from "gsap/TweenLite";
+// import  {TweenLite} from "gsap/all";
 import { ElButton } from "element-plus";
-import { TweenLite } from "gsap/TweenMax";
 import { nextTick, ref } from "vue";
+import { TweenLite  } from "gsap/umd/TweenMax"; 
 var tweenLite = null;
 let endTime = ref(0);
 let startTime = ref(0);
@@ -120,10 +120,10 @@ const reverse = () => {
 
 ```vue:no-line-numbers
 <script setup>
-// import TweenLite from "gsap/TweenLite";
+// import  {TweenLite} from "gsap/all";
 import { ElButton } from "element-plus";
-import { TweenLite } from "gsap/TweenMax";
 import { nextTick } from "vue";
+import { TweenLite  } from "gsap/umd/TweenMax"; 
 var tweenLite = null;
 nextTick(() => {
   let logo = document.getElementById("from");
@@ -194,8 +194,8 @@ const reverse = () => {
 ```vue:no-line-numbers
 <script setup>
 import { ElButton } from "element-plus";
-import { TweenLite } from "gsap/TweenMax";
 import { nextTick } from "vue";
+import { TweenLite  } from "gsap/umd/TweenMax"; 
 var tweenLite = null;
 nextTick(() => {
   let logo = document.getElementById("fromTo");
@@ -274,8 +274,8 @@ const reverse = () => {
 ```vue:no-line-numbers
 <script setup>
 import { ElButton } from "element-plus";
-import { TweenLite } from "gsap/TweenMax";
 import { nextTick } from "vue";
+import { TweenLite  } from "gsap/umd/TweenMax"; 
 var tweenLite = null;
 nextTick(() => {
   let logo = document.getElementById("invalidate");
@@ -350,8 +350,8 @@ const invalidate = () => {
 ```vue:no-line-numbers
 <script setup>
 import { ElButton } from "element-plus";
-import { TweenLite } from "gsap/TweenMax";
 import { nextTick } from "vue";
+import { TweenLite  } from "gsap/umd/TweenMax"; 
 var tweenLite = null;
 nextTick(() => {
   let logo = document.getElementById("delay");
@@ -423,10 +423,10 @@ const delay = (num = 5) => {
 
 ```vue:no-line-numbers
 <script setup>
-// import TweenLite from "gsap/TweenLite";
+// import  {TweenLite} from "gsap/all";
 import { ElButton } from "element-plus";
-import { TweenLite } from "gsap/TweenMax";
 import { nextTick, ref } from "vue";
+import { TweenLite  } from "gsap/umd/TweenMax"; 
 var tweenLite = null;
 // let startTime = ref(0);
 let time = ref(0);

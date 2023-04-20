@@ -2,6 +2,7 @@
 import { ElButton } from "element-plus";
 import { TweenLite } from "gsap/TweenMax";
 import { nextTick } from "vue";
+
 var tweenLite = null;
 nextTick(() => {
   let logo = document.getElementById("fromTo");

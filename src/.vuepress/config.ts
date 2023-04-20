@@ -46,7 +46,12 @@ export default defineUserConfig({
       { name: "apple-mobile-web-app-status-bar-style", content: "default" },
     ],
     ["meta", { name: "apple-touch-fullscreen", content: "yes" }],
-    ["meta", { name: "apple-mobile-web-app-title", content: "𝓜𝓻. 𝓦𝓪𝓷𝓰" }],
+    // [
+    //   "script",
+    //   {
+    //     src: "https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js",
+    //   },
+    // ],
   ],
   description: "个人博客",
   pagePatterns: ["**/*.md", "!**/README.md", "!.vuepress", "!node_modules"],

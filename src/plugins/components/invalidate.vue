@@ -12,7 +12,7 @@ nextTick(() => {
       borderBottomColor: "#90e500",
     },
     delay: 0,
-    ease: 'Power4.easeInOut',
+    ease: "Power4.easeInOut",
   });
 });
 

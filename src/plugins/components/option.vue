@@ -1,8 +1,9 @@
 <script setup>
-// import TweenLite from "gsap/TweenLite";
+// import  {TweenLite} from "gsap/all";
 import { ElButton } from "element-plus";
 import { TweenLite } from "gsap/TweenMax";
 import { nextTick, ref } from "vue";
+
 var tweenLite = null;
 // let startTime = ref(0);
 let time = ref(0);
@@ -19,7 +20,7 @@ nextTick(() => {
     },
     delay: 0,
     paused: true,
-    ease: 'Power0.easeIn',
+    ease: "Power0.easeIn",
     onUpdate: () => {
       // startTime.value = tweenLite.startTime().toFixed();
       time.value = tweenLite.time().toFixed();
