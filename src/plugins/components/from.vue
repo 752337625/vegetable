@@ -1,7 +1,7 @@
 <script setup>
 // import TweenLite from "gsap/TweenLite";
 import { ElButton } from "element-plus";
-import { TweenLite, Power4 } from "gsap/umd/TweenMax";
+import { TweenLite } from "gsap/TweenMax";
 import { nextTick } from "vue";
 var tweenLite = null;
 nextTick(() => {
@@ -17,7 +17,7 @@ nextTick(() => {
     // paused: true, // 覆盖上面的delay
     // repeat: -1, // 无效
     // yoyo: true, // 无效
-    ease: Power4.easeOut,
+    ease: 'Power4.easeOut',
   });
   // tweenLite.value.delay(5); // 覆盖上面的delay
   // tweenLite.value.duration(10); // 覆盖上面的duration

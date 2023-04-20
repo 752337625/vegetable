@@ -1,7 +1,7 @@
 <script setup>
 // import TweenLite from "gsap/TweenLite";
 import { ElButton } from "element-plus";
-import { TweenLite, Linear } from "gsap/umd/TweenMax";
+import { TweenLite } from "gsap/TweenMax";
 import { nextTick, ref } from "vue";
 var tweenLite = null;
 let endTime = ref(0);
@@ -15,11 +15,10 @@ nextTick(() => {
       backgroundColor: "black",
       borderBottomColor: "#90e500",
     },
-    // 延迟
     delay: 0,
     repeat: -1, // 无效
     yoyo: true, // 无效
-    ease: Linear.easeIn,
+    ease: "Power0.easeIn",
     onUpdate: () => {
       totalDuration.value = tweenLite.totalDuration();
       startTime.value = tweenLite.startTime().toFixed(5);

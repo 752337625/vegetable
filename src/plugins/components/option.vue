@@ -1,7 +1,7 @@
 <script setup>
 // import TweenLite from "gsap/TweenLite";
 import { ElButton } from "element-plus";
-import { TweenLite, Linear } from "gsap/umd/TweenMax";
+import { TweenLite } from "gsap/TweenMax";
 import { nextTick, ref } from "vue";
 var tweenLite = null;
 // let startTime = ref(0);
@@ -19,7 +19,7 @@ nextTick(() => {
     },
     delay: 0,
     paused: true,
-    ease: Linear.easeIn,
+    ease: 'Power0.easeIn',
     onUpdate: () => {
       // startTime.value = tweenLite.startTime().toFixed();
       time.value = tweenLite.time().toFixed();
@@ -30,7 +30,6 @@ nextTick(() => {
   });
 });
 // TweenLite.delayedCall(1, myFunction, ["param1", 2]);
-
 // function myFunction(param1, param2) {
 //   console.log(param1, param2);
 //   //do stuff

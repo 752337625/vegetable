@@ -1,7 +1,6 @@
 <script setup>
-// import TweenLite from "gsap/TweenLite";
 import { ElButton } from "element-plus";
-import { TweenLite, Bounce, Circ } from "gsap/umd/TweenMax";
+import { TweenLite } from "gsap/TweenMax";
 import { nextTick } from "vue";
 var tweenLite = null;
 nextTick(() => {
@@ -15,12 +14,8 @@ nextTick(() => {
         backgroundColor: "#90e500",
         borderBottomColor: "#000",
       },
-      // 延迟
       delay: 0,
-      // paused: true, // 覆盖上面的delay
-      // repeat: -1, // 无效
-      // yoyo: true, // 无效
-      ease: Bounce.easeIn,
+      ease: "Bounce.easeIn",
     },
     {
       css: {
@@ -28,16 +23,10 @@ nextTick(() => {
         backgroundColor: "black",
         borderBottomColor: "#90e500",
       },
-      // 延迟
       delay: 0,
-      // paused: true, // 覆盖上面的delay
-      // repeat: -1, // 无效
-      // yoyo: true, // 无效
-      ease: Circ.easeInOut,
+      ease: "Circ.easeInOut",
     }
   );
-  // tweenLite.value.delay(5); // 覆盖上面的delay
-  // tweenLite.value.duration(10); // 覆盖上面的duration
 });
 
 const restart = () => {

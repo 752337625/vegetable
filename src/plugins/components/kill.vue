@@ -1,8 +1,8 @@
 <script setup>
 // import TweenLite from "gsap/TweenLite";
 import { ElButton } from "element-plus";
-import { TweenLite, Linear } from "gsap/umd/TweenMax";
-import { nextTick, ref } from "vue";
+import { TweenLite } from "gsap/TweenMax";
+import { nextTick } from "vue";
 var tweenLite = null;
 nextTick(() => {
   let logo = document.getElementById("kill");
@@ -13,7 +13,7 @@ nextTick(() => {
       borderBottomColor: "#90e500",
     },
     delay: 0,
-    ease: Linear.easeIn,
+    ease: 'Power0.easeIn',
   });
 });
 

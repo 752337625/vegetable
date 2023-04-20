@@ -1,7 +1,6 @@
 <script setup>
-// import TweenLite from "gsap/TweenLite";
 import { ElButton } from "element-plus";
-import { TweenLite, Power4 } from "gsap/umd/TweenMax";
+import { TweenLite } from "gsap/TweenMax";
 import { nextTick } from "vue";
 var tweenLite = null;
 nextTick(() => {
@@ -13,7 +12,7 @@ nextTick(() => {
       borderBottomColor: "#90e500",
     },
     delay: 0,
-    ease: Power4.easeInOut,
+    ease: 'Power4.easeInOut',
   });
 });
 

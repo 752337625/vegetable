@@ -36,9 +36,12 @@ tag:
 <script setup>
 // import TweenLite from "gsap/TweenLite";
 import { ElButton } from "element-plus";
-import { TweenLite, Linear } from "gsap/umd/TweenMax";
+import { TweenLite } from "gsap/TweenMax";
 import { nextTick, ref } from "vue";
 var tweenLite = null;
+let endTime = ref(0);
+let startTime = ref(0);
+let totalDuration = ref(0);
 nextTick(() => {
   let logo = document.getElementById("to");
   tweenLite = TweenLite.to(logo, 10, {
@@ -47,12 +50,15 @@ nextTick(() => {
       backgroundColor: "black",
       borderBottomColor: "#90e500",
     },
-    // 延迟
     delay: 0,
-    // paused: true, // 覆盖上面的delay
-    // repeat: -1, // 无效
-    // yoyo: true, // 无效
-    ease: Linear.easeIn,
+    repeat: -1, // 无效
+    yoyo: true, // 无效
+    ease: "Power0.easeIn",
+    onUpdate: () => {
+      totalDuration.value = tweenLite.totalDuration();
+      startTime.value = tweenLite.startTime().toFixed(5);
+      endTime.value = tweenLite.endTime().toFixed(5);
+    },
   });
   // tweenLite.value.delay(5); // 覆盖上面的delay
   // tweenLite.value.duration(10); // 覆盖上面的duration
@@ -60,10 +66,12 @@ nextTick(() => {
 
 const restart = () => {
   // 参数意思：考虑delay属性
+  if (tweenLite.isActive()) return;
   tweenLite.restart(true, false);
 };
 const reverse = () => {
-  tweenLite.reverse(0);
+  if (tweenLite.isActive()) return;
+  tweenLite.reverse();
 };
 </script>
 
@@ -71,6 +79,12 @@ const reverse = () => {
   <div id="demo">
     <div id="to">
       <span>TweenLite.to</span>
+      <br />
+      <span>totalDuration：{{ totalDuration }}</span>
+      <br />
+      <span>startTime：{{ startTime }}</span>
+      <br />
+      <span>endTime：{{ endTime }}</span>
     </div>
     <div>
       <el-button type="primary" @click="restart">restart</el-button>
@@ -86,18 +100,19 @@ const reverse = () => {
   margin-bottom: 25px;
 }
 #to {
-  font-size: 18px;
+  font-size: 12px;
   text-align: center;
   position: relative;
   width: 150px;
   height: calc(100% - 16px);
   background-color: #90e500;
   border-bottom: solid #000 10px;
-  line-height: 130px;
+  line-height: 30px;
   margin-bottom: 5px;
   color: #fff;
 }
 </style>
+
 
 ```
 
@@ -107,7 +122,7 @@ const reverse = () => {
 <script setup>
 // import TweenLite from "gsap/TweenLite";
 import { ElButton } from "element-plus";
-import { TweenLite, Power4 } from "gsap/umd/TweenMax";
+import { TweenLite } from "gsap/TweenMax";
 import { nextTick } from "vue";
 var tweenLite = null;
 nextTick(() => {
@@ -123,7 +138,7 @@ nextTick(() => {
     // paused: true, // 覆盖上面的delay
     // repeat: -1, // 无效
     // yoyo: true, // 无效
-    ease: Power4.easeOut,
+    ease: 'Power4.easeOut',
   });
   // tweenLite.value.delay(5); // 覆盖上面的delay
   // tweenLite.value.duration(10); // 覆盖上面的duration
@@ -131,10 +146,12 @@ nextTick(() => {
 
 const restart = () => {
   // 参数意思：考虑delay属性
+  if (tweenLite.isActive()) return;
   tweenLite.restart(true, false);
 };
 const reverse = () => {
-  tweenLite.reverse(0);
+  if (tweenLite.isActive()) return;
+  tweenLite.reverse();
 };
 </script>
 
@@ -169,15 +186,15 @@ const reverse = () => {
   color: #fff;
 }
 </style>
+
 ```
 
 ## TweenLite.fromTo
 
 ```vue:no-line-numbers
 <script setup>
-// import TweenLite from "gsap/TweenLite";
 import { ElButton } from "element-plus";
-import { TweenLite, Bounce, Circ } from "gsap/umd/TweenMax";
+import { TweenLite } from "gsap/TweenMax";
 import { nextTick } from "vue";
 var tweenLite = null;
 nextTick(() => {
@@ -191,12 +208,8 @@ nextTick(() => {
         backgroundColor: "#90e500",
         borderBottomColor: "#000",
       },
-      // 延迟
       delay: 0,
-      // paused: true, // 覆盖上面的delay
-      // repeat: -1, // 无效
-      // yoyo: true, // 无效
-      ease: Bounce.easeIn,
+      ease: "Bounce.easeIn",
     },
     {
       css: {
@@ -204,24 +217,20 @@ nextTick(() => {
         backgroundColor: "black",
         borderBottomColor: "#90e500",
       },
-      // 延迟
       delay: 0,
-      // paused: true, // 覆盖上面的delay
-      // repeat: -1, // 无效
-      // yoyo: true, // 无效
-      ease: Circ.easeInOut,
+      ease: "Circ.easeInOut",
     }
   );
-  // tweenLite.value.delay(5); // 覆盖上面的delay
-  // tweenLite.value.duration(10); // 覆盖上面的duration
 });
 
 const restart = () => {
   // 参数意思：考虑delay属性
+  if (tweenLite.isActive()) return;
   tweenLite.restart(true, false);
 };
 const reverse = () => {
-  tweenLite.reverse(0);
+  if (tweenLite.isActive()) return;
+  tweenLite.reverse();
 };
 </script>
 
@@ -257,15 +266,15 @@ const reverse = () => {
 }
 </style>
 
+
 ```
 
 ## TweenLite.invalidate
 
 ```vue:no-line-numbers
 <script setup>
-// import TweenLite from "gsap/TweenLite";
 import { ElButton } from "element-plus";
-import { TweenLite, Power4 } from "gsap/umd/TweenMax";
+import { TweenLite } from "gsap/TweenMax";
 import { nextTick } from "vue";
 var tweenLite = null;
 nextTick(() => {
@@ -277,7 +286,7 @@ nextTick(() => {
       borderBottomColor: "#90e500",
     },
     delay: 0,
-    ease: Power4.easeInOut,
+    ease: 'Power4.easeInOut',
   });
 });
 
@@ -288,7 +297,7 @@ const restart = () => {
 };
 const reverse = () => {
   if (tweenLite.isActive()) return;
-  tweenLite.reverse(0);
+  tweenLite.reverse();
 };
 const invalidate = () => {
   if (tweenLite.isActive()) return;
@@ -334,28 +343,26 @@ const invalidate = () => {
   color: #fff;
 }
 </style>
-
 ```
 
 ## TweenLite.delay
 
 ```vue:no-line-numbers
 <script setup>
-// import TweenLite from "gsap/TweenLite";
 import { ElButton } from "element-plus";
-import { TweenLite, Linear } from "gsap/umd/TweenMax";
+import { TweenLite } from "gsap/TweenMax";
 import { nextTick } from "vue";
 var tweenLite = null;
 nextTick(() => {
   let logo = document.getElementById("delay");
-  tweenLite = TweenLite.to(logo, 2, {
+  tweenLite = TweenLite.to(logo, 10, {
     css: {
       left: "610px",
       backgroundColor: "black",
       borderBottomColor: "#90e500",
     },
     delay: 0,
-    ease: Linear.easeIn,
+    ease: "Power0.easeIn",
   });
 });
 
@@ -366,7 +373,7 @@ const restart = () => {
 };
 const reverse = () => {
   if (tweenLite.isActive()) return;
-  tweenLite.reverse(0);
+  tweenLite.reverse();
 };
 const delay = (num = 5) => {
   if (tweenLite.isActive()) return;
@@ -409,15 +416,16 @@ const delay = (num = 5) => {
 }
 </style>
 
+
 ```
 
-## TweenLite 基本属性和函数
+## TweenLite 基本属性和函数（option）
 
 ```vue:no-line-numbers
 <script setup>
 // import TweenLite from "gsap/TweenLite";
 import { ElButton } from "element-plus";
-import { TweenLite, Linear } from "gsap/umd/TweenMax";
+import { TweenLite } from "gsap/TweenMax";
 import { nextTick, ref } from "vue";
 var tweenLite = null;
 // let startTime = ref(0);
@@ -435,7 +443,7 @@ nextTick(() => {
     },
     delay: 0,
     paused: true,
-    ease: Linear.easeIn,
+    ease: 'Power0.easeIn',
     onUpdate: () => {
       // startTime.value = tweenLite.startTime().toFixed();
       time.value = tweenLite.time().toFixed();
@@ -446,7 +454,6 @@ nextTick(() => {
   });
 });
 // TweenLite.delayedCall(1, myFunction, ["param1", 2]);
-
 // function myFunction(param1, param2) {
 //   console.log(param1, param2);
 //   //do stuff
@@ -527,5 +534,6 @@ const progress = () => {
   color: #fff;
 }
 </style>
+
 
 ```
