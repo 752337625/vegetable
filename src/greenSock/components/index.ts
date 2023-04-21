@@ -1,4 +1,4 @@
-import Timeline from "./Timeline.vue";
+import gsap from "./gsap.vue";
 export function install(app) {
-  app.component("Timeline", Timeline);
+  app.component("gsap", gsap);
 }

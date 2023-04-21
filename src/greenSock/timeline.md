@@ -7,14 +7,14 @@ tag:
   - GreenSock
 ---
 
-# Timeline
+# gsap
 
-## Timeline 状态函数
+## gsap 状态函数
 
-## Timeline 案例
+## gsap 案例
 
 <ClientOnly>
-  <Timeline></Timeline>
+  <gsap></gsap>
 </ClientOnly>
 
 ## gsap.to
