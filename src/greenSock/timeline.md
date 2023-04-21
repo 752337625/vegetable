@@ -11,17 +11,20 @@ tag:
 
 ## gsap 状态函数
 
-## gsap 案例
+## gsap.to
 
 <ClientOnly>
-  <gsap></gsap>
+  <gsap componentId="to"></gsap>
 </ClientOnly>
-
-## gsap.to
 
 ```vue:no-line-numbers
 <!-- @include: ./components/to.vue -->
 ```
+
+<!--
+<ClientOnly>
+  <gsap componentId="to"></gsap>
+</ClientOnly> -->
 
 ## gsap.from
 
@@ -35,7 +38,7 @@ tag:
 <!-- @include: ./components/fromTo.vue -->
 ```
 
-## Timeline.invalidate
+## gsap.invalidate
 
 ```vue:no-line-numbers
 <!-- @include: ./components/invalidate.vue -->

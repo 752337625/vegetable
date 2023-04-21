@@ -3,9 +3,6 @@ import { ElButton } from "element-plus";
 import { gsap } from "gsap";
 import { nextTick, ref } from "vue";
 var tweenLite: any = null;
-let endTime = ref(0);
-let startTime = ref(0);
-let totalDuration = ref(0);
 nextTick(() => {
   let logo = document.getElementById("to");
   tweenLite = gsap.to(logo, {
@@ -14,9 +11,11 @@ nextTick(() => {
       backgroundColor: "black",
       borderBottomColor: "#90e500",
     },
-    duration: 10,
+    duration: 5,
     delay: 1,
     repeat: -1,
+    yoyo: true,
+    reversed: false, //不要设置为true，否则会一直停在开始
     ease: "Power0.easeIn",
   });
 });
@@ -26,11 +25,12 @@ nextTick(() => {
   <div id="demo">
     <div id="to">
       <span>gsap.to</span>
-      <span>duration: 10</span>
+      <span>duration: 5</span>
       <span>delay: 1</span>
       <span>repeat: -1</span>
       <span>yoyo: true</span>
       <span>ease: "Power0.easeIn"</span>
+      <span>reversed: false,</span>
     </div>
   </div>
 </template>
@@ -45,7 +45,7 @@ nextTick(() => {
   span {
     display: block;
     margin: 0;
-    padding-bottom: 5px;
+    padding-bottom: 2px;
   }
   text-align: left;
   font-size: 12px;

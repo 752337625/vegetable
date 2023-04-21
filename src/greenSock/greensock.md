@@ -205,10 +205,10 @@ Club Plugins 仅适用于 Club GreenSock 会员，因此它们不在 CDN 上。�
   - repeat: Number：
   - repeatDelay: Number：
   - repeatRefresh
-  - reversed
+  - reversed: Boolea：如果为 true，如果为 false 任何意义
   - runBackwards
   - stagger
   - startAt
-  - yoyo: Boolea：
+  - yoyo: Boolea： if repeat is 2 and yoyo is false, it will look like: start - 1 - 2 - 3 - 1 - 2 - 3 - 1 - 2 - 3 - end. But if yoyo is true, it will look like: start - 1 - 2 - 3 - 3 - 2 - 1 - 1 - 2 - 3 - end. Default: false.
   - yoyoEase
   - keyframes: Boolean：

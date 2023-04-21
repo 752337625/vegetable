@@ -6,10 +6,13 @@ import To from "./to.vue";
 // import Delay from "./delay.vue";
 // import Kill from "./kill.vue";
 // import Option from "./option.vue";
+let props = defineProps({
+  componentId: String,
+});
 </script>
 
 <template>
-  <To></To>
+  <To v-if="componentId === 'to'"></To>
   <!-- <Delay></Delay> -->
   <!-- <From></From>
   <FromTo></FromTo>
