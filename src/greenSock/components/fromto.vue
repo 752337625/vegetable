@@ -1,12 +1,12 @@
-<script setup>
+<script  lang="ts" setup>
 import { ElButton } from "element-plus";
-import { TweenLite } from "gsap/TweenMax";
+import { gsap } from "gsap";
 import { nextTick } from "vue";
 
-var tweenLite = null;
+var tweenLite: any = null;
 nextTick(() => {
   let logo = document.getElementById("fromTo");
-  tweenLite = TweenLite.fromTo(
+  tweenLite = gsap.fromTo(
     logo,
     10,
     {

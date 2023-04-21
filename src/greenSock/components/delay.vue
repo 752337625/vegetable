@@ -1,17 +1,20 @@
-<script setup>
+<script lang="ts" setup>
 import { ElButton } from "element-plus";
-import { TweenLite } from "gsap/TweenMax";
+import { gsap } from "gsap";
 import { nextTick } from "vue";
-var tweenLite = null;
+var tweenLite: any = null;
 nextTick(() => {
   let logo = document.getElementById("delay");
-  tweenLite = TweenLite.to(logo, 10, {
+  tweenLite = gsap.to(logo, {
     css: {
       left: "610px",
       backgroundColor: "black",
       borderBottomColor: "#90e500",
     },
-    delay: 0,
+    duration: 10,
+    delay: 5,
+    repeat: -1, // 无效
+    yoyo: true, // 无效
     ease: "Power0.easeIn",
   });
 });
@@ -35,14 +38,14 @@ const delay = (num = 5) => {
 <template>
   <div id="demo">
     <div id="delay">
-      <span>TweenLite.delay</span>
+      <span>delay：5</span>
     </div>
-    <div>
+    <!-- <div>
       <el-button type="primary" @click="restart">restart</el-button>
       <el-button type="primary" @click="reverse">reverse</el-button>
       <el-button type="primary" @click="delay(5)">delay(5)</el-button>
       <el-button type="primary" @click="delay(0)">delay(0)</el-button>
-    </div>
+    </div> -->
   </div>
 </template>
 <style lang="less" scoped>

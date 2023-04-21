@@ -1,26 +1,19 @@
-<script setup>
-// import  {TweenLite} from "gsap/all";
+<script  lang="ts" setup>
 import { ElButton } from "element-plus";
-import { TweenLite } from "gsap/TweenMax";
+import { gsap } from "gsap";
 import { nextTick } from "vue";
-var tweenLite = null;
+var tweenLite: any = null;
 nextTick(() => {
-  let logo = document.getElementById("from");
-  tweenLite = TweenLite.from(logo, 10, {
+  let logo = document.getElementById("invalidate");
+  tweenLite = gsap.to(logo, 2, {
     css: {
-      left: "610px",
+      left: "+=100",
       backgroundColor: "black",
       borderBottomColor: "#90e500",
     },
-    // 延迟
     delay: 0,
-    // paused: true, // 覆盖上面的delay
-    // repeat: -1, // 无效
-    // yoyo: true, // 无效
-    ease: "Power4.easeOut",
+    ease: "Power4.easeInOut",
   });
-  // tweenLite.value.delay(5); // 覆盖上面的delay
-  // tweenLite.value.duration(10); // 覆盖上面的duration
 });
 
 const restart = () => {
@@ -32,27 +25,38 @@ const reverse = () => {
   if (tweenLite.isActive()) return;
   tweenLite.reverse();
 };
+const invalidate = () => {
+  if (tweenLite.isActive()) return;
+  tweenLite.invalidate();
+  tweenLite.restart();
+};
 </script>
 
 <template>
+  <span class="title">不恢复到任何以前记录的开始值的情况下重新启动动画</span>
   <div id="demo">
-    <div id="from">
-      <span>TweenLite.from</span>
+    <div id="invalidate">
+      <span>TweenLite.to</span>
     </div>
     <div>
       <el-button type="primary" @click="restart">restart</el-button>
       <el-button type="primary" @click="reverse">reverse</el-button>
+      <el-button type="primary" @click="invalidate">invalidate</el-button>
     </div>
   </div>
 </template>
 <style lang="less" scoped>
+.title {
+  display: inline-block;
+  margin: 10px 0;
+}
 #demo {
   height: 150px;
   background-color: #333;
   padding: 8px;
   margin-bottom: 25px;
 }
-#from {
+#invalidate {
   font-size: 18px;
   text-align: center;
   position: relative;

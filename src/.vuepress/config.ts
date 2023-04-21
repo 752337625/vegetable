@@ -141,6 +141,7 @@ export default defineUserConfig({
         rss: true,
       },
       mdEnhance: {
+        mark: true,
         tabs: true, // 选项卡启用
         codetabs: true, // 代码分组
         chart: true,

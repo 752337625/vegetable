@@ -1,10 +1,10 @@
-<script setup>
+<script  lang="ts" setup>
 // import  {TweenLite} from "gsap/all";
 import { ElButton } from "element-plus";
-import { TweenLite } from "gsap/TweenMax";
+import { gsap } from "gsap";
 import { nextTick, ref } from "vue";
 
-var tweenLite = null;
+var tweenLite: any = null;
 // let startTime = ref(0);
 let time = ref(0);
 let totalDuration = ref(0);
@@ -12,7 +12,7 @@ let progressDuration = ref(0);
 let totalTime = ref(0);
 nextTick(() => {
   let logo = document.getElementById("play");
-  tweenLite = TweenLite.to(logo, 20, {
+  tweenLite = gsap.to(logo, 20, {
     css: {
       left: "610px",
       backgroundColor: "black",

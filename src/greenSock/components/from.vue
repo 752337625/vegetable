@@ -1,30 +1,23 @@
-<script setup>
+<script  lang="ts" setup>
 // import  {TweenLite} from "gsap/all";
 import { ElButton } from "element-plus";
-import { TweenLite } from "gsap/TweenMax";
-import { nextTick, ref } from "vue";
-
-var tweenLite = null;
-let endTime = ref(0);
-let startTime = ref(0);
-let totalDuration = ref(0);
+import { gsap } from "gsap";
+import { nextTick } from "vue";
+var tweenLite: any = null;
 nextTick(() => {
-  let logo = document.getElementById("to");
-  tweenLite = TweenLite.to(logo, 10, {
+  let logo = document.getElementById("from");
+  tweenLite = gsap.from(logo, 10, {
     css: {
       left: "610px",
       backgroundColor: "black",
       borderBottomColor: "#90e500",
     },
+    // 延迟
     delay: 0,
-    repeat: -1, // 无效
-    yoyo: true, // 无效
-    ease: "Power0.easeIn",
-    onUpdate: () => {
-      totalDuration.value = tweenLite.totalDuration();
-      startTime.value = tweenLite.startTime().toFixed(5);
-      endTime.value = tweenLite.endTime().toFixed(5);
-    },
+    // paused: true, // 覆盖上面的delay
+    // repeat: -1, // 无效
+    // yoyo: true, // 无效
+    ease: "Power4.easeOut",
   });
   // tweenLite.value.delay(5); // 覆盖上面的delay
   // tweenLite.value.duration(10); // 覆盖上面的duration
@@ -43,14 +36,8 @@ const reverse = () => {
 
 <template>
   <div id="demo">
-    <div id="to">
-      <span>TweenLite.to</span>
-      <br />
-      <span>totalDuration：{{ totalDuration }}</span>
-      <br />
-      <span>startTime：{{ startTime }}</span>
-      <br />
-      <span>endTime：{{ endTime }}</span>
+    <div id="from">
+      <span>TweenLite.from</span>
     </div>
     <div>
       <el-button type="primary" @click="restart">restart</el-button>
@@ -65,15 +52,15 @@ const reverse = () => {
   padding: 8px;
   margin-bottom: 25px;
 }
-#to {
-  font-size: 12px;
+#from {
+  font-size: 18px;
   text-align: center;
   position: relative;
   width: 150px;
   height: calc(100% - 16px);
   background-color: #90e500;
   border-bottom: solid #000 10px;
-  line-height: 30px;
+  line-height: 130px;
   margin-bottom: 5px;
   color: #fff;
 }

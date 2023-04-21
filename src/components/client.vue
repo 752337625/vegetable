@@ -47,7 +47,7 @@
 		</div>
 	</div>
 </template>
-<script setup lang="ts">
+<script  lang="ts" setup>
 	import { PictureFilled, CameraFilled, Close, VideoCameraFilled } from '@element-plus/icons-vue';
 	import { ElTooltip, ElInput, ElIcon, ElButton } from 'element-plus';
 	import { ref, nextTick } from 'vue';
