@@ -3,7 +3,7 @@ article: false
 prev: false
 next: false
 category:
-  - plugins
+  - Plugins
 tag:
   - nvmrc
 ---

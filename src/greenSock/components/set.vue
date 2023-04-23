@@ -2,11 +2,11 @@
 import { gsap } from "gsap";
 import { nextTick } from "vue";
 nextTick(() => {
-  let logo = document.getElementById("from");
-  gsap.from(logo, {
+  let logo = document.getElementById("set");
+  gsap.set(logo, {
     css: {
       rotation: -360,
-      x: "610px",
+      left: "610px",
       backgroundColor: "black",
       borderBottomColor: "#90e500",
     },
@@ -17,21 +17,16 @@ nextTick(() => {
     yoyo: true, // 动画循环模式
     yoyoEase: "strong.inOut", // 反向动画
     reversed: false, //不要设置为true，否则会一直停在开始
-    ease: "elastic", //yoyoEase不存在正向或者反向动画，yoyoEase存在只能表示正向动画
+    ease: "Power0.easeIn", //yoyoEase不存在正向或者反向动画，yoyoEase存在只能表示正向动画
   });
 });
 </script>
 
 <template>
   <div id="demo">
-    <div id="from">
-      <span>gsap.from</span>
-      <span>duration: 5</span>
-      <span>delay: 1</span>
-      <span>repeat: -1</span>
-      <span>yoyo: true</span>
-      <span>ease: "elastic"</span>
-      <span>reversed: false,</span>
+    <div id="set">
+      <span>gsap.set</span>
+       <span>no animation</span>
     </div>
   </div>
 </template>
@@ -42,7 +37,7 @@ nextTick(() => {
   padding: 8px;
   margin-bottom: 25px;
 }
-#from {
+#set {
   span {
     display: block;
     margin: 0;

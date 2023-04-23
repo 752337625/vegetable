@@ -1,12 +1,9 @@
-<script  lang="ts" setup>
-import { ElButton } from "element-plus";
+<script lang="ts" setup>
 import { gsap } from "gsap";
 import { nextTick } from "vue";
-
-var tweenLite: any = null;
 nextTick(() => {
   let logo = document.getElementById("fromTo");
-  tweenLite = gsap.fromTo(
+  gsap.fromTo(
     logo,
     10,
     {
@@ -15,7 +12,13 @@ nextTick(() => {
         backgroundColor: "#90e500",
         borderBottomColor: "#000",
       },
-      delay: 0,
+      duration: 5, // 动画执行时间
+      delay: 0, // 动画延迟执行时间
+      repeat: -1, // 动画循环次数
+      repeatDelay: 0,
+      yoyo: true, // 动画循环模式
+      yoyoEase: "strong.inOut", // 反向动画
+      reversed: false, //不要设置为true，否则会一直停在开始
       ease: "Bounce.easeIn",
     },
     {
@@ -24,31 +27,23 @@ nextTick(() => {
         backgroundColor: "black",
         borderBottomColor: "#90e500",
       },
-      delay: 0,
+      duration: 5, // 动画执行时间
+      delay: 0, // 动画延迟执行时间
+      repeat: -1, // 动画循环次数
+      repeatDelay: 0,
+      yoyo: true, // 动画循环模式
+      yoyoEase: "strong.inOut", // 反向动画
+      reversed: false, //不要设置为true，否则会一直停在开始
       ease: "Circ.easeInOut",
     }
   );
 });
-
-const restart = () => {
-  // 参数意思：考虑delay属性
-  if (tweenLite.isActive()) return;
-  tweenLite.restart(true, false);
-};
-const reverse = () => {
-  if (tweenLite.isActive()) return;
-  tweenLite.reverse();
-};
 </script>
 
 <template>
   <div id="demo">
     <div id="fromTo">
       <span>TweenLite.fromTo</span>
-    </div>
-    <div>
-      <el-button type="primary" @click="restart">restart</el-button>
-      <el-button type="primary" @click="reverse">reverse</el-button>
     </div>
   </div>
 </template>
@@ -60,6 +55,7 @@ const reverse = () => {
   margin-bottom: 25px;
 }
 #fromTo {
+  border-radius: 30px;
   font-size: 18px;
   text-align: center;
   position: relative;
