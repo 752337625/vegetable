@@ -2,7 +2,7 @@
 import { gsap } from "gsap";
 import { nextTick } from "vue";
 nextTick(() => {
-  gsap.to(".box", 1, {
+  gsap.to(".box1", 1, {
     scale: 0,
     y: 0,
     yoyo: true,
@@ -19,14 +19,14 @@ nextTick(() => {
 
 <template>
   <div id="demo">
-    <div class="box green" v-for="item in 50" :key="item"></div>
+    <div class="box1 green" v-for="item in 50" :key="item"></div>
   </div>
 </template>
 <style lang="less" scoped>
 #demo {
   display: flex;
 }
-.box {
+.box1 {
   width: 10px;
   height: 90px;
 }
