@@ -1,4 +1,4 @@
-import gsapv from "./gsapv.vue";
+import greenSock from "./greenSock.vue";
 export function install(app) {
-  app.component("gsapv", gsap);
+  app.component("greenSock", greenSock);
 }
