@@ -6,7 +6,7 @@ category:
   - ECMAScript
 tag:
   - ECMAScript
-star: true
+
 ---
 
 # IntersectionObserver
