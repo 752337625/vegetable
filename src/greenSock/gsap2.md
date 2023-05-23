@@ -14,7 +14,7 @@ tag:
 ## gsap.to
 
 <ClientOnly>
-  <gsap componentId="To"></gsap>
+  <gsapv componentId="To"></gsapv>
 </ClientOnly>
 
 ```vue:no-line-numbers
@@ -24,7 +24,7 @@ tag:
 ## gsap.from
 
 <ClientOnly>
-  <gsap componentId="From"></gsap>
+  <gsapv componentId="From"></gsapv>
 </ClientOnly>
 
 ```vue:no-line-numbers
@@ -34,7 +34,7 @@ tag:
 ## gsap.fromTo
 
 <ClientOnly>
-  <gsap componentId="FromTo"></gsap>
+  <gsapv componentId="FromTo"></gsapv>
 </ClientOnly>
 
 ```vue:no-line-numbers
@@ -44,7 +44,7 @@ tag:
 ## gsap.set
 
 <ClientOnly>
-  <gsap componentId="Set"></gsap>
+  <gsapv componentId="Set"></gsapv>
 </ClientOnly>
 
 ```vue:no-line-numbers
@@ -54,7 +54,7 @@ tag:
 ## gsap.staggers（Number）
 
 <ClientOnly>
-  <gsap componentId="Staggers"></gsap>
+  <gsapv componentId="Staggers"></gsapv>
 </ClientOnly>
 
 ```vue:no-line-numbers
@@ -64,7 +64,7 @@ tag:
 ## gsap.staggers（Object）
 
 <ClientOnly>
-  <gsap componentId="Staggers1"></gsap>
+  <gsapv componentId="Staggers1"></gsapv>
 </ClientOnly>
 
 ```vue:no-line-numbers
@@ -74,7 +74,7 @@ tag:
 ## gsap.staggers（Object）
 
 <ClientOnly>
-  <gsap componentId="Staggers2"></gsap>
+  <gsapv componentId="Staggers2"></gsapv>
 </ClientOnly>
 
 ```vue:no-line-numbers

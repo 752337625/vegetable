@@ -1,4 +1,4 @@
-import gsap from "./gsap.vue";
+import gsapv from "./gsapv.vue";
 export function install(app) {
-  app.component("gsap", gsap);
+  app.component("gsapv", gsap);
 }
