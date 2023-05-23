@@ -38,7 +38,7 @@ tag:
 </ClientOnly>
 
 ```vue:no-line-numbers
-<!-- @include: ./components/fromTo.vue -->
+<!-- @include: ./components/fromto.vue -->
 ```
 
 ## gsap.set
