@@ -22,7 +22,7 @@
   },
   "scripts": {
     "bootstrap": "pnpm install",
-    "serve": "vuepress dev src",
+    "serve": "vuepress dev src  --debug",
     "build": "vuepress build src --debug"
   },
   "devDependencies": {
