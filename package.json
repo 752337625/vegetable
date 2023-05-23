@@ -23,7 +23,7 @@
   "scripts": {
     "bootstrap": "pnpm install",
     "serve": "vuepress dev src",
-    "build": "vuepress build src"
+    "build": "vuepress build src --debug"
   },
   "devDependencies": {
     "@types/gsap": "^3.0.0",
