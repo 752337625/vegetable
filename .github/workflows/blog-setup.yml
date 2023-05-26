@@ -25,16 +25,16 @@ jobs:
       - name: Use Node
         uses: actions/setup-node@v3
         with:
-          node-version: 16.14.0
-          
-      - name: Setup Pnpm
-        run: npm i -g pnpm@7.12.2
+          node-version: 16
+
+      # - name: Setup Pnpm
+      #   run: npm i -g pnpm@7.12.2
 
       - name: Install
-        run: pnpm i
+        run: npm i
 
       - name: build blog
-        run: pnpm run build
+        run: npm run build
         env:
           NODE_OPTIONS: --max_old_space_size=8192
           GH_TOKEN: ${{ secrets.BLOG_GH_TOKEN }}
