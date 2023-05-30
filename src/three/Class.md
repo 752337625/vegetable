@@ -12,12 +12,37 @@ tag:
 <!-- more -->
 
 ```class
+Object3D --|> Camera
+Object3D --|> CubeCamera
+Camera --|> PerspectiveCamera
+Camera --|> OrthographicCamera
+PerspectiveCamera --|> ArrayCamera
+OrbitControls --|> MapControls
 class Object3D {
 }
+note "Math"
 class Euler {
 }
 class Quaternion {
 }
 class Vector3 {
+}
+note "Camera"
+class Camera {
+}
+class CubeCamera {
+}
+class StereoCamera {
+}
+class OrthographicCamera {
+}
+class PerspectiveCamera {
+}
+note "Controls"
+class OrbitControls{
+}
+class MapControls{
+}
+class FlyControls{
 }
 ```

@@ -21,6 +21,8 @@ class Object3D {
   +visible  Boolean
   +add ( object : Object3D, ... ) : this
   +remove ( object : Object3D, ... )  this
+  +clone ( recursive : Boolean ) : Object3D
+  +copy ( object : Object3D, recursive : Boolean ) : this
   +lookAt ( vector : Vector3 ) : undefined
   +lookAt ( x : Float, y : Float, z : Float ) : undefined
   +rotateOnAxis ( axis : Vector3, angle : Float )  this
