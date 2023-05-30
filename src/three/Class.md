@@ -40,4 +40,7 @@ class MapControls{
 }
 class FlyControls{
 }
+note "Core"
+class BufferGeometry {
+}
 ```
