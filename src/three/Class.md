@@ -16,7 +16,6 @@ Object3D --|> Camera
 Object3D --|> CubeCamera
 Camera --|> PerspectiveCamera
 Camera --|> OrthographicCamera
-PerspectiveCamera --|> ArrayCamera
 OrbitControls --|> MapControls
 class Object3D {
 }
@@ -29,10 +28,6 @@ class Vector3 {
 }
 note "Camera"
 class Camera {
-}
-class CubeCamera {
-}
-class StereoCamera {
 }
 class OrthographicCamera {
 }

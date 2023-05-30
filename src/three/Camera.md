@@ -14,13 +14,19 @@ tag:
 <!-- more -->
 
 ```class
+Object3D --|> Camera
+Camera --|> PerspectiveCamera
+Camera --|> OrthographicCamera
 class Camera {
   +matrixWorldInverse : Matrix4
   +projectionMatrix : Matri
   +projectionMatrixInverse : Matrix4
   +clone ( )  Camera
   +copy ( source : Camera, recursive : Boolean )  this
-
+}
+class PerspectiveCamera {
+}
+class OrthographicCamera {
 }
 
 ```
