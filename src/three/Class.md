@@ -16,15 +16,7 @@ Object3D --|> Camera
 Object3D --|> CubeCamera
 Camera --|> PerspectiveCamera
 Camera --|> OrthographicCamera
-OrbitControls --|> MapControls
 class Object3D {
-}
-note "Math"
-class Euler {
-}
-class Quaternion {
-}
-class Vector3 {
 }
 note "Camera"
 class Camera {
@@ -33,6 +25,20 @@ class OrthographicCamera {
 }
 class PerspectiveCamera {
 }
+```
+
+```class
+note "Math"
+class Euler {
+}
+class Quaternion {
+}
+class Vector3 {
+}
+```
+
+```class
+OrbitControls --|> MapControls
 note "Controls"
 class OrbitControls{
 }
@@ -40,7 +46,12 @@ class MapControls{
 }
 class FlyControls{
 }
+```
+
+```class
 note "Core"
 class BufferGeometry {
+}
+class BufferAttribute {
 }
 ```
