@@ -7,8 +7,8 @@ tag:
   - ThreeJS
 ---
 
-# ConeGeometry
+# ArrowHelper
 
-圆锥形几何体。例如：十四面圆锥体，最终形成圆锥。
+箭头辅助器,用于模拟方向的 3 维箭头对象
 
 <!-- more -->

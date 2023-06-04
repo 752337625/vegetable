@@ -7,8 +7,8 @@ tag:
   - ThreeJS
 ---
 
-# ConeGeometry
+# DodecahedronGeometry
 
-圆锥形几何体。例如：十四面圆锥体，最终形成圆锥。
+多面缓冲几何体（最少十二面），最终是一个圆
 
 <!-- more -->
