@@ -9,6 +9,6 @@ tag:
 
 # BoxGeometry
 
-BoxGeometry 是四边形的原始几何类，它通常使用构造函数所提供的“width”、“height”、“depth”参数来创建立方体或者不规则四边形。
+BoxGeometry 是立方体(长方体，正方体)
 
 <!-- more -->
