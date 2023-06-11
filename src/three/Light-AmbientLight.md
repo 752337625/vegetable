@@ -8,7 +8,7 @@ tag:
   - Light
 ---
 
-# AmbientLight
+# AmbientLight(环境光)
 
 环境光会均匀的照亮场景中的所有物体。
 
