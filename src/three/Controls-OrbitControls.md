@@ -82,6 +82,24 @@ Orbit controls（轨道控制器）可以使得相机围绕目标进行轨道运
 
 你能够将相机放大多少（仅适用于 OrthographicCamera），其默认值为 0。
 
+### .target : Vector3
+
+控制器的焦点，.object 的轨道围绕它运行。 它可以在任何时候被手动更新，以更改控制器的焦点。
+
+> > 关于相机我们知道改变.position 属性后，如果不执行.lookAt()方法，相机的观察方向默认不变。
+> > 如果你希望相机圆周运动的同时，改变相机视线方向，保持相机镜头始终指向坐标原点或其它位置，需要每次改变.position 属性后，重新执行一遍.lookAt()方法。
+
+相机控件 OrbitControls.target 属性对应的就是相机的.lookAt()观察目标。
+
+执行 controls.update();,相机控件内部会执行 camera.lookAt(controls.target)。
+
+```js
+// controls.target 默认值是坐标原点
+controls.target.set(x, y, z);
+//update()函数内会执行 camera.lookAt(x, y, z)
+controls.update();
+```
+
 ### 待测试属性
 
 - .object : Camera
@@ -107,10 +125,6 @@ Orbit controls（轨道控制器）可以使得相机围绕目标进行轨道运
 - .target0 : Vector3
 
 由.saveState 和.reset 方法在内部使用。
-
-- .target : Vector3
-
-控制器的焦点，.object 的轨道围绕它运行。 它可以在任何时候被手动更新，以更改控制器的焦点。
 
 - .zoom0 : Float
 

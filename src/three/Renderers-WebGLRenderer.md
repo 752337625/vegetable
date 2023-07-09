@@ -16,6 +16,14 @@ class WebGLRenderer {
 
 ```
 
+## 构造器
+
+- depth - 绘图缓存是否有一个至少 6 位的深度缓存(depth buffer )。 默认是 true.
+- antialias - 是否执行抗锯齿。默认为 false.
+- precision - 着色器精度. 可以是 "highp", "mediump" 或者 "lowp". 如果设备支持，默认为"highp" .
+  默认是 true.
+- logarithmicDepthBuffer - 是否使用对数深度缓存。如果要在单个场景中处理巨大的比例差异，就有必要使用。 Note that this setting uses gl_FragDepth if available which disables the Early Fragment Test optimization and can cause a decrease in performance. 默认是 false。 示例：camera / logarithmicdepthbuffer
+
 ## 属性
 
 #### .shadowMap : WebGLShadowMap
