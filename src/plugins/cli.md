@@ -92,3 +92,13 @@ npm i 它可以正确给出提示（而且是中文的，更加友好），且�
 此时，再使用正确的包管理器 pnpm (pnpm add lodash）后，再重启测试，发现程序运行正常
 
 ![npm-only-allow](./img/npm-only-allow1.webp)
+
+## pnpm
+
+-F 后面是子目录 package.json 的 name
+-C 后面是子目录 名称
+
+```shell
+"project:report": "pnpm run -F @jingluo/project report",
+"project:build": "pnpm run -C project build",
+```
