@@ -36,11 +36,7 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.0.9",
-    "@mediapipe/selfie_segmentation": "^0.1.1671057942",
     "@tensorflow-models/body-segmentation": "^1.0.1",
-    "@tensorflow/tfjs-backend-webgl": "3.21.0",
-    "@tensorflow/tfjs-converter": "3.21.0",
-    "@tensorflow/tfjs-core": "3.21.0",
     "@vueuse/shared": "^8.9.4",
     "element-plus": "^2.2.9",
     "gsap": "^3.11.5",
