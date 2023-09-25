@@ -70,3 +70,35 @@ wait-on http-get://unix:/var/SOCKPATH:/a/foo # wait for http GET on domain socke
 ```sh:no-line-numbers
 "electron:serve": "concurrently \"pnpm run serve\" \"wait-on tcp:3100 && pnpm run start\""
 ```
+
+## npm-only-allow
+
+```shell
+"preinstall": "npx npm-only-allow@latest --PM pnpm"
+```
+
+只允许 pnpm preinstall 脚本会在 install 之前执行，现在，只要有人运行 npm install 或 yarn install，就会调用 npm-only-allow 去限制只允许使用 pnpm 安装依赖。
+
+### 统一安装
+
+npm i 它可以正确给出提示（而且是中文的，更加友好），且不会生产 node_modules。 可以看到，安装错误后生成了.pnpm-debug.log 文件
+
+![npm-only-allow](./img/npm-only-allow.webp)
+
+### 单个安装
+
+执行 npm i lodash，我发现是没有被拦截掉的，翻了下文档后发现，是需要在项目执行时才会针对单独安装进行检测的，则执行 npm run start，发现会被正确拦截，并且列出了哪个依赖被错误安装了
+
+此时，再使用正确的包管理器 pnpm (pnpm add lodash）后，再重启测试，发现程序运行正常
+
+![npm-only-allow](./img/npm-only-allow1.webp)
+
+## pnpm
+
+-F 后面是子目录 package.json 的 name
+-C 后面是子目录 名称
+
+```shell
+"project:report": "pnpm run -F @jingluo/project report",
+"project:build": "pnpm run -C project build",
+```
