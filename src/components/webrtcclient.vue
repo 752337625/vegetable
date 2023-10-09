@@ -34,6 +34,7 @@
   </div>
 </template>
 <script lang="ts" setup>
+import { ElButton} from "element-plus";
 import { ref, nextTick } from "vue";
 import { Message } from "./types/client";
 import type { Ref } from "vue";
