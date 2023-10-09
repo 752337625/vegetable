@@ -34,7 +34,8 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { ElButton} from "element-plus";
+import { PictureFilled, CameraFilled, Close, VideoCameraFilled } from "@element-plus/icons-vue";
+import { ElTooltip, ElInput, ElIcon, ElButton } from "element-plus";
 import { ref, nextTick } from "vue";
 import { Message } from "./types/client";
 import type { Ref } from "vue";
