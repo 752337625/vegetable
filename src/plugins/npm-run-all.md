@@ -1,5 +1,5 @@
 ---
-article: true
+article: false
 pageview: true
 prev: false
 next: false

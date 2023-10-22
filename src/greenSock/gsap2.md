@@ -1,4 +1,5 @@
 ---
+article: false
 prev: false
 next: ./gsap3
 category:
