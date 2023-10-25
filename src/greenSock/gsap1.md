@@ -1,5 +1,5 @@
 ---
-article: false
+article: true
 prev: false
 next: ./gsap2
 category:

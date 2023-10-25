@@ -1,5 +1,5 @@
 ---
-article: false
+article: true
 prev: ./img
 next: ./canvas
 category:

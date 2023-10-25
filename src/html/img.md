@@ -1,5 +1,5 @@
 ---
-article: false
+article: true
 prev: ./dialog
 next: ./table
 category:
